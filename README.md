@@ -1,4 +1,0 @@
-AndroidUtils
-============
-
-AndroidUtils

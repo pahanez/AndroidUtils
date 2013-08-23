@@ -1,0 +1,14 @@
+      @Override
+        public ArrayList<String> fullfill() {
+            try {
+                ArrayList<String> process = new ArrayList<String>();
+                Process p = Runtime.getRuntime().exec("top -n 1");
+                BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+                String str;
+                while((str = br.readLine()) != null) process.add(str);
+                return process;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
